@@ -1,0 +1,123 @@
+:root{
+    --box-shadow: 0px 1px 4px 1px rgba(199,199,199,1);
+    --income: green;
+    --expense: red;
+}
+
+body{
+    font-family: 'Open-Sans', sans-serif;
+    display: flex;
+    flex-direction: column; /* align it all to center*/
+    justify-content: center;
+    align-items: center;
+}
+
+.app h1,h2{
+    text-align: center;
+}
+
+h2{
+    text-transform: uppercase;
+}
+.balance-container, #balance{ /*the #balance goes to the div with that id*/
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.cashflow {
+    display: flex; /* puts them into one line*/
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px; /*leaves a 20 pixel space between next thing*/
+}
+
+.income-container {
+    border-right: 1px solid #aaaaaa;
+    padding-right: 20px;
+}
+.expense-container {
+    padding-left: 20px;
+}
+#income, #expenses{ /* all div tags with income or expense */
+    font-size: 1.3em;
+}
+
+#income {
+    color: var(--income);
+}
+
+#expenses {
+    color: var(--expense);
+}
+
+#transaction{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#transaction li {
+    display: flex; /* puts it same line */
+    flex-direction: row;
+    justify-content: space-between; /*cool line which spaces them out evenly*/
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+#transaction li .income-amt{
+    font-weight: bold;
+    color: var(--income);
+}
+#transaction li .expense-amt{
+    font-weight: bold;
+    color: var(--expense);
+}
+#transaction li button{
+    padding: 0px 10px 5px 10px;
+
+}
+
+#transaction li span{
+    margin-right: 10px;
+}
+
+.addtrans-container form{
+    display: flex;
+    flex-direction: column;
+}
+
+.addtrans-container form label{
+    padding-bottom: 10px;
+}
+
+.addtrans-container form input {
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+#amount {
+    height: 25px;
+}
+
+#income-button{
+    border: none;
+    background-color: var(--income);
+    color: aliceblue;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+#expense-button{
+    border: none;
+    background-color: var(--expense);
+    color: aliceblue;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
